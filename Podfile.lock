@@ -1,38 +1,10 @@
 PODS:
-  - MaterialComponents/AnimationTiming (110.0.0)
-  - MaterialComponents/AppBar (110.0.0):
-    - MaterialComponents/FlexibleHeader
-    - MaterialComponents/HeaderStackView
-    - MaterialComponents/NavigationBar
-    - MaterialComponents/private/Application
-    - MaterialComponents/private/Icons/ic_arrow_back
-    - MaterialComponents/private/UIMetrics
-    - MaterialComponents/ShadowElevations
-    - MaterialComponents/ShadowLayer
-    - MaterialComponents/Typography
-    - MDFInternationalization
-  - MaterialComponents/Availability (110.0.0)
-  - MaterialComponents/ButtonBar (110.0.0):
-    - MaterialComponents/Buttons
-    - MaterialComponents/private/Application
-    - MDFInternationalization
-  - MaterialComponents/Buttons (110.0.0):
-    - MaterialComponents/Elevation
-    - MaterialComponents/Ink
-    - MaterialComponents/private/Math
-    - MaterialComponents/Ripple
-    - MaterialComponents/ShadowElevations
-    - MaterialComponents/ShadowLayer
-    - MaterialComponents/ShapeLibrary
-    - MaterialComponents/Shapes
-    - MaterialComponents/Typography
-    - MDFInternationalization
-    - MDFTextAccessibility
-  - MaterialComponents/Elevation (110.0.0):
+  - MaterialComponents/Availability (119.0.0)
+  - MaterialComponents/Elevation (119.0.0):
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
-  - MaterialComponents/FlexibleHeader (110.0.0):
+  - MaterialComponents/FlexibleHeader (119.0.0):
     - MaterialComponents/Availability
     - MaterialComponents/Elevation
     - "MaterialComponents/FlexibleHeader+ShiftBehavior"
@@ -43,81 +15,69 @@ PODS:
     - MaterialComponents/ShadowElevations
     - MaterialComponents/ShadowLayer
     - MDFTextAccessibility
-  - "MaterialComponents/FlexibleHeader+ShiftBehavior (110.0.0)"
-  - "MaterialComponents/FlexibleHeader+ShiftBehaviorEnabledWithStatusBar (110.0.0)":
+  - "MaterialComponents/FlexibleHeader+ShiftBehavior (119.0.0)"
+  - "MaterialComponents/FlexibleHeader+ShiftBehaviorEnabledWithStatusBar (119.0.0)":
     - "MaterialComponents/FlexibleHeader+ShiftBehavior"
-  - MaterialComponents/HeaderStackView (110.0.0)
-  - MaterialComponents/Ink (110.0.0):
+  - MaterialComponents/private/Application (119.0.0)
+  - MaterialComponents/private/Color (119.0.0):
     - MaterialComponents/Availability
-    - MaterialComponents/private/Color
-    - MaterialComponents/private/Math
-  - MaterialComponents/NavigationBar (110.0.0):
-    - MaterialComponents/ButtonBar
-    - MaterialComponents/Elevation
-    - MaterialComponents/private/Math
-    - MaterialComponents/Typography
-    - MDFInternationalization
-    - MDFTextAccessibility
-  - MaterialComponents/private/Application (110.0.0)
-  - MaterialComponents/private/Color (110.0.0):
-    - MaterialComponents/Availability
-  - MaterialComponents/private/Icons/Base (110.0.0)
-  - MaterialComponents/private/Icons/ic_arrow_back (110.0.0):
-    - MaterialComponents/private/Icons/Base
-  - MaterialComponents/private/Math (110.0.0)
-  - MaterialComponents/private/UIMetrics (110.0.0):
+  - MaterialComponents/private/Math (119.0.0)
+  - MaterialComponents/private/UIMetrics (119.0.0):
     - MaterialComponents/private/Application
-  - MaterialComponents/Ripple (110.0.0):
-    - MaterialComponents/AnimationTiming
-    - MaterialComponents/Availability
-    - MaterialComponents/private/Color
-    - MaterialComponents/private/Math
-  - MaterialComponents/ShadowElevations (110.0.0)
-  - MaterialComponents/ShadowLayer (110.0.0):
+  - MaterialComponents/ShadowElevations (119.0.0)
+  - MaterialComponents/ShadowLayer (119.0.0):
     - MaterialComponents/ShadowElevations
-  - MaterialComponents/ShapeLibrary (110.0.0):
-    - MaterialComponents/private/Math
-    - MaterialComponents/Shapes
-  - MaterialComponents/Shapes (110.0.0):
-    - MaterialComponents/private/Color
-    - MaterialComponents/private/Math
-    - MaterialComponents/ShadowLayer
-  - MaterialComponents/Typography (110.0.0):
-    - MaterialComponents/private/Application
-    - MaterialComponents/private/Math
-    - MDFTextAccessibility
-  - MDFInternationalization (2.0.0)
   - MDFTextAccessibility (2.0.0)
-  - NDLog (0.0.5)
-  - NDUtils/Core (0.0.4.1)
-  - NDUtils/objc (0.0.4.1):
-    - NDLog (~> 0.0.5)
+  - NDLog (0.0.6.1):
+    - NDLog/Swift (= 0.0.6.1)
+  - NDLog/Core (0.0.6.1)
+  - NDLog/ObjC (0.0.6.1):
+    - NDLog/Core
+  - NDLog/Swift (0.0.6.1):
+    - NDLog/Core
+  - NDMaterialComponentsUtils (0.0.2):
+    - NDMaterialComponentsUtils/Swift (= 0.0.2)
+  - NDMaterialComponentsUtils/Core (0.0.2)
+  - NDMaterialComponentsUtils/FlexibleHeader (0.0.2):
+    - MaterialComponents/FlexibleHeader
+    - NDLog (~> 0.0.6)
+    - NDMaterialComponentsUtils/Core
+    - NDUtils/objc (~> 0.0.5)
+  - NDMaterialComponentsUtils/ObjC (0.0.2):
+    - NDMaterialComponentsUtils/Core
+    - NDMaterialComponentsUtils/FlexibleHeader
+  - NDMaterialComponentsUtils/Swift (0.0.2):
+    - NDMaterialComponentsUtils/ObjC
+  - NDUtils/Core (0.0.5)
+  - NDUtils/objc (0.0.5):
+    - NDLog/ObjC (~> 0.0.6)
     - NDUtils/Core
 
 DEPENDENCIES:
-  - MaterialComponents/AppBar
   - NDLog (from `../NDLog`)
+  - NDMaterialComponentsUtils (from `.`)
   - NDUtils/objc (from `../NDUtils`)
 
 SPEC REPOS:
   trunk:
     - MaterialComponents
-    - MDFInternationalization
     - MDFTextAccessibility
 
 EXTERNAL SOURCES:
   NDLog:
     :path: "../NDLog"
+  NDMaterialComponentsUtils:
+    :path: "."
   NDUtils:
     :path: "../NDUtils"
 
 SPEC CHECKSUMS:
-  MaterialComponents: 8de2f7a102ae37bf276a558ac88086780f6d1b5f
-  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
+  MaterialComponents: 69a725e28406a97816441dea4ec6ec38265a08bb
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
-  NDLog: 2d478a5bc74f17ee56fea08adb6dacdaa36a07e6
-  NDUtils: 071967534549cb07e0122a53af462e4a5d6da124
+  NDLog: 1e996efb979679f547dcf729a955fe92577ed2c5
+  NDMaterialComponentsUtils: 1b5e3a0462568d6a081b63a5b9db764b0cc1e2ea
+  NDUtils: 77434f23e14037a6366a7371d359a8c18a571276
 
-PODFILE CHECKSUM: b133981bbc9afca9c8d79a580327c0c773311849
+PODFILE CHECKSUM: db911ef31ce59b630047d0b242e78c519c81828e
 
 COCOAPODS: 1.9.3
